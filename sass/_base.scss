@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: $font-color;
+}
+body {
+  background-color: $body-bg;
+  min-height: 100vh;
+  @include flexCenter;
+}
+.main {
+  background-color: $main-bg;
+  width: 100%;
+  max-width: 800px;
+  min-height: 100vh;
+  padding: 1rem;
+  overflow-y: hidden;
+  @include flexStart;
+  flex-direction: column;
+  @include mq(800px) {
+    min-height: 95vh;
+    max-height: 95vh;
+    border: 1px solid $border-color;
+    box-shadow: 5px 10px 8px $shadow-color;
+  }
+}
+section {
+  width: 100%;
+}
+a {
+  color: $link-color;
+  font-weight: bold;
+}
+a:hover {
+  color: $link-hover;
+}
+.bold {
+  font-weight: bold;
+}

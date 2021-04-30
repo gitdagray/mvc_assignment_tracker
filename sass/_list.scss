@@ -1,0 +1,82 @@
+.list {
+  width: 100%;
+  max-height: 70vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-bottom: 0.75rem;
+  border: 1px solid $border-color;
+  @include flexStart;
+  flex-direction: column;
+  position: relative;
+  @include mq(400px) {
+    max-height: 75vh;
+  }
+}
+
+.list__row {
+  width: 100%;
+  max-width: 100%;
+  border-bottom: 1px solid $border-color;
+  @include flexStart;
+  flex-direction: row;
+}
+
+.list__row:last-child {
+  border: none;
+}
+
+.list__header {
+  width: 100%;
+  padding: 0.5em;
+  position: sticky;
+  top: 0;
+  background: $link-color;
+  color: $inverse-font-color;
+  font-weight: bold;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include mq(768px) {
+    flex-direction: row;
+  }
+}
+
+.list__header h1 {
+  font-size: 1.5rem;
+}
+
+.list__header_select {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 1rem;
+}
+
+.list__header_select button {
+  background-color: $go-button;
+  margin-left: 0.25rem;
+}
+
+.list__item {
+  flex-grow: 1;
+  padding: 0.5em;
+}
+
+.list__removeItem {
+  @include flexCenter;
+}
+
+.remove-button {
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  padding-right: 0.5em;
+  outline: none;
+}
+
+.remove-button:focus,
+.remove-button:hover {
+  text-shadow: 2px 2px 5px $shadow-color;
+}
